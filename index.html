@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用語集</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header id="site-header">
+        <h1>コミュニティ 用語集</h1>
+        <p>このコミュニティで使われる造語・スラングをまとめたページです　全 <span id="total-count">…</span> 語</p>
+    </header>
+
+    <div id="wrapper">
+
+        <!-- 検索 -->
+        <div id="search-area">
+            <label for="searchInput">キーワード検索：</label>
+            <input type="text" id="searchInput" placeholder="用語・説明・タグで絞り込み…（Esc でクリア）">
+            <span id="search-count"></span>
+        </div>
+
+        <!-- 行インデックス（ボタンは app.js で生成） -->
+        <div id="index-bar">
+            <strong>行：</strong>
+        </div>
+
+        <!-- エラー表示 -->
+        <div id="load-error"></div>
+
+        <!-- 用語一覧（app.js で生成） -->
+        <div id="glossary"></div>
+
+        <!-- 検索結果なし -->
+        <div id="no-results">該当する用語が見つかりませんでした。</div>
+
+        <footer id="site-footer">
+            <p>用語の追加・編集は <code>data.json</code> を直接編集してください。</p>
+        </footer>
+
+    </div><!-- /wrapper -->
+
+    <script src="app.js"></script>
+</body>
+
+</html>
